@@ -1,0 +1,166 @@
+body {
+  background-color: #1c1c1c;
+  color: #b0b0b0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.footer .options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: #619ae3;
+  flex-wrap: wrap;
+}
+
+.footer .options div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: 1px solid #3a3a3a;
+  border-radius: 20px;
+  color: #619ae3;
+  margin: 5px;
+}
+
+.footer .options div i {
+  color: #619ae3;
+}
+
+.footer .info {
+  margin-bottom: 20px;
+  margin: 20px auto;
+}
+
+.footer .links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer .links a {
+  color: #b0b0b0;
+  text-decoration: none;
+  color: #619ae3;
+}
+
+.footer .dropdowns {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.footer .dropdowns div {
+  color: #619ae3;
+}
+
+.content {
+  border-bottom: solid 2px #37393d;
+  border-top: solid 2px #37393d;
+  height: 350px;
+}
+
+.learn-more {
+  color: #4a90e2;
+}
+
+@media (max-width: 600px) {
+  .footer .options {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer .info {
+    width: 80%;
+  }
+
+  .footer .links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer .dropdowns {
+    flex-direction: column;
+    gap: 10px;
+  }
+  :root {
+    background-color: #202124;
+  }
+  .footer .links a {
+    text-align: center;
+  }
+}
+
+/* Custom styles for select dropdown */
+.footer .dropdown-container {
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: #2a2a2a00;
+  padding: 5px 15px;
+  position: relative;
+}
+
+#country-select {
+  background-color: #2a2a2a00;
+  color: #b0b0b0;
+  border: none;
+  font-size: 16px;
+  padding: 10px 10px 10px 15px; /* Adding space for the custom arrow */
+  border-radius: 15px;
+  width: 250px;
+  margin-top: 5px;
+  appearance: none; /* Remove default browser arrow */
+}
+
+#country-select:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+#country-select option {
+  background-color: #2a2a2a;
+  color: #b0b0b0;
+  padding: 10px;
+  border: none;
+}
+
+#country-select option:hover {
+  background-color: #37393d;
+}
+
+#country-select option:checked {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+/* Custom arrow */
+.footer .dropdown-container::after {
+  content: "▼"; /* Unicode character for the down arrow */
+  font-size: 16px;
+  color: #619ae3;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent interference with click events */
+}
+
+/* Arrow hover effect */
+#country-select:hover + .dropdown-container::after {
+  color: #4a90e2; /* Change color on hover */
+}

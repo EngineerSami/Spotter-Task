@@ -1,0 +1,52 @@
+.big-div {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+h1 {
+    font-size: 24px;
+}
+h6 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 20px;
+}
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #b0b0b0;
+}
+.tab.active {
+    color: #8ab4f8;
+    border-bottom: 2px solid #8ab4f8;
+}
+.links {
+    display: flex;
+    flex-wrap: wrap;
+}
+.links div {
+    flex: 1 1 33%;
+    padding: 5px 0;
+}
+.links a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .links div {
+        flex: 1 1 50%;
+    }
+}
+@media (max-width: 480px) {
+    .links div {
+        flex: 1 1 100%;
+    }
+}

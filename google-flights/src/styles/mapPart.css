@@ -1,0 +1,99 @@
+.parent {
+    padding: 20px;
+}
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+h4{
+    margin-bottom: 40px;
+    color: white;
+    font-size: 20px;
+}
+.map-container {
+    background-color: #30313400;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1020px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 20px;
+    height: 350px;
+    display: block;
+}
+
+.centered-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #202124;
+    border: none;
+    color: #8ab4f8;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+    height: 30px;
+    width: 180px;
+}
+
+.Big {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Grid layout for Airlines and Airports */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    max-width: 1020px; 
+    width: 100%;
+}
+
+.airlines, .airports {
+    text-align: center;
+    width: 100%;
+}
+
+.airline, .airport {
+    background-color: #30313400;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.airline{
+    border: solid 2px gray;
+    height: 60px;
+}
+
+.airline img, .airport img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.airline-info, .airport-info {
+    display: flex;
+    align-items: center;
+}
+.dropdown{
+    background-color: #20212400;
+    border: none;
+    color: gray;
+}

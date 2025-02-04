@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #202124;
+    color: #E8EAED;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #202124;
+    border-bottom: 1px solid #5f6368;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+.navbar .menu-icon, 
+.navbar .google-logo, 
+.navbar .user-icon {
+    margin-right: 20px;
+    color: white;
+}
+
+.navbar svg {
+    color: #a8c7fa; /* Default icon color */
+}
+
+.navbar .menu-icon svg, 
+.navbar .user-icon svg {
+    font-size: 24px;
+    color: #E8EAED;
+}
+
+.navbar .google-logo {
+    font-size: 22px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.navbar .nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #3a3e41;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #3c4043;
+}
+
+.navbar .nav-links a.active {
+    background-color: #394457;
+    color: #68a9f8;
+}
+
+.navbar .nav-links a svg {
+    margin-right: 5px;
+}
+
+.navbar .sun-icon, 
+.navbar .apps-icon, 
+.navbar .user-icon {
+    margin-left: 20px;
+}
+
+.navbar .sun-icon svg, 
+.navbar .apps-icon svg {
+    font-size: 20px;
+    color: #E8EAED;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+}

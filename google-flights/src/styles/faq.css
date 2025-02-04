@@ -1,0 +1,89 @@
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+.main{
+    margin-left: 23%;
+    margin-top: 70px;
+}
+:root{
+    background-color: #202124;
+}
+.accordion-item {
+    border-top: 1px solid #4b4b4b;
+    width: 70%;
+    margin-bottom: 10px;
+    overflow: hidden; 
+    color: white;
+}
+
+.accordion-header {
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f700;
+    border-top: 1px solid #4b4b4b;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #dddddd00; 
+}
+
+.accordion-content {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 15px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
+    background-color: #fafafa00;
+    color: #999999;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+.accordion-header i {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #ffffff;
+}
+
+.accordion-header.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-item.open .accordion-content {
+    max-height: 500px;  
+    opacity: 1;
+    padding: 10px 15px; 
+}
+
+.accordion-item.open .accordion-header {
+    background-color: #e7e7e700;
+}
+
+.accordion-item.open .accordion-header i {
+    transform: rotate(180deg);
+}

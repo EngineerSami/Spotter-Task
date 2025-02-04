@@ -1,0 +1,261 @@
+.container {
+    text-align: center;
+}
+
+.background-image {
+    width: 100%;
+    max-width: 1250px;
+    margin-top: 52px;
+}
+
+.titlee {
+    font-size: 55px;
+    margin-top: -4%;
+    color: white;
+}
+
+.search-container {
+    background-color: #36373a;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 52%;
+    margin: 0 auto;
+    margin-top: 30px;
+    flex-direction: column; 
+}
+
+.search-container > div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+    margin-top: -20px;
+    position: relative; /* Ensure the suggestions are positioned relative to this div */
+}
+
+.search-container .dropdown {
+    display: inline-block;
+    width: 17%; 
+    background-color: #20212400;
+}
+
+.search-container > div i {
+    color: #888888;
+}
+
+.search-container > div input {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    outline: none;
+    width: 100%;
+}
+
+.search-container > div input::placeholder {
+    color: #cfcfcf;
+}
+
+.search-container .dropdown button {
+    background-color: #4b4b4b00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.search-container .dropdown button:hover {
+    background-color: #5b5b5b;
+}
+
+.search-container .dropdown button:focus {
+    background-color: #70a2f33a;
+    border-bottom:solid 2px #8ab4f8;
+}
+
+.search-container .dropdown button i {
+    margin-right: 5px;
+}
+
+.search-container .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4b4b4b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.search-container .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.search-container .dropdown-content a:hover {
+    background-color: #5b5b5b;
+}
+
+.search-container .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search-container .search-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 23%;
+    box-sizing: border-box; 
+    border: 1px solid #4b4b4b;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 20px;
+    margin-left: 15px;
+    min-width: 50px;
+}
+
+
+
+.explore-button {
+    background-color: #8ab4f8;
+    color: #2d333e;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 20px auto;
+    margin-top: -20px;
+    max-width: 120px;
+    font-weight: bold;
+    font-size: 14px;
+}
+:root{
+    background-color: #202124;
+}
+.explore-button i {
+    color: #2d333e;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .search-container {
+        width: 80%;
+    }
+
+    .search-container .search-option {
+        width: 48%;
+    }
+
+    .search-container .dropdown {
+        width: 100%;
+    }
+
+    .explore-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .search-container .search-option {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .search-container .dropdown {
+        width: 100%;
+    }
+
+    .explore-button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-container .search-option {
+        width: 100%;
+    }
+
+    .search-container .dropdown button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .explore-button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+.suggestions {
+    position: absolute;
+    top: 100%; /* Make sure the suggestions appear directly below the input */
+    left: 0;
+    background-color: #36373a;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px 0;
+    margin: 5px 0 0;
+    width: 100%; /* Adjust width to match the input */
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggestions li:hover {
+    background-color: #5b5b5b;
+}
+
+.suggestions::-webkit-scrollbar {
+    width: 6px;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+    background-color: #8ab4f8;
+    border-radius: 5px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+    background: transparent;
+}
